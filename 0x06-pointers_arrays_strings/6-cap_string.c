@@ -16,9 +16,9 @@ char *cap_string(char *str)
 			str[0] = str[0] - 32;
 		}
 	if (str[x] == ' ' || str[x] == '\t' || str[x] == '\n' || str[x] == ','
-	    || str[x] == ';' || str[x] == '.' || str[x] == '!'|| str[x] == '?'
-	    || str[x] == '"' || str[x] == '(' || str[x] == ')' || str[x] == '{'
-	    || str[x] == '}')
+	    || str[x] == ';' || str[x] == '.' || str[x] == '.' || str[x] == '!'
+	    || str[x] == '?' || str[x] == '"' || str[x] == '(' || str[x] == ')'
+	    || str[x] == '{' || str[x] == '}')
 	{
 		if (str[x + 1] > 96 && str[x + 1] < 123)
 		{
