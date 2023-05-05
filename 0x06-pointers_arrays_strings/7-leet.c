@@ -7,12 +7,10 @@
   */
 char *leet(char *x)
 {
-	int a, b;
-
+	int a = 0, b;
 	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
 
 	while (x[a])
-
 	{
 		for (b = 0; b <= 7; b++)
 		{
