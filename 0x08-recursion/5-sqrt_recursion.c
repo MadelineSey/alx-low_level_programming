@@ -1,30 +1,39 @@
-#include "main.h"
-
-/**
-  *_sqrt_recursion - return the natural square root of a number
-  *@n: find the square root of n
-  *Return: -1 if n does not have a natural square root
-  */
-int _sqrt_recursion(int n)
-{
-	if (n < 0)
-		return (-1);
-	return (natural_sqrt_recursion(n, 0));
+#include "main.h"                                                                                                                     
+                                                                                                                                      
+int find_sqrt(int x, int y);                                                                                                     
+int _sqrt_recursion(int n);                                                                                                           
+                                                                                                                                      
+/**                                                                                                                                   
+  *find_sqrt - Finds the natural square root of a number.                                                                   
+  *@x: The number
+  *@y: the root
+  *Return: -1; If n does not have a natural square root                                                                    
+  */                                                                                                                                   
+int find_sqrt(int x, int y)                                                                                                      
+{                                                                                                                                     
+        if ((y * y) == x)                                                                                                     
+                return (y);                                                                                                        
+                                                                                                                                      
+        if (y == x / 2)                                                                                                          
+                return (-1);                                                                                                          
+                                                                                                                                      
+        return (find_sqrt(x, y + 1));                                                                                            
 }
-
-/**
-  *natural_sqrt_recursion - recurses to find the natural
-  *square root of a number
-  *@n: find the square root of n
-  *@i: the root
-  *Return: the square root
-  */
-int natural_sqrt_recursion(int n, int i)
-{
-	if (i * i > n)
-		return (-1);
-	if (i * i == n)
-		return (i);
-	return (natural_sqrt_recursion(n, i + 1));
-}
-
+                                                                                                                                      
+/**                                                                                                                                   
+  *_sqrt_recursion - Returns the natural square root of a number n                                                                     
+  *@n: The number                                                                                                                    
+  *Return: -1 ; if n does not have a natural square root                                                                             
+  */                                                                                                                                   
+int _sqrt_recursion(int n)                                                                                                            
+{                                                                                                                                     
+        int y = 0;                                                                                                                 
+                                                                                                                                      
+        if (n < 0)                                                                                                                    
+                return (-1);                                                                                                          
+                                                                                                                                      
+        if (n == 1)                                                                                                                   
+                return (1);                                                                                                           
+                                                                                                                                      
+        return (find_sqrt(n, y));                                                                                                  
+} 
