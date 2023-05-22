@@ -22,12 +22,12 @@ int _strlen(char *s)
   *including the terminating null byte (\0)
   *to the buffer pointed to by dest
   *@dest: pointer to the buffer
-  *@src: the string
+  *@src: the source
   *Return: the pointer to dest
   */
 char *_strcpy(char *dest, char *src)
 {
-	int a = 0, x;
+	int a = 0, x = 0;
 
 	while (src[a] != '\0')
 	{
