@@ -74,7 +74,7 @@ void print_class(unsigned char *e_ident)
 	case ELFCLASSNONE:
 		printf("none\n");
 		break;
-case ELFCLASS32:
+	case ELFCLASS32:
 		printf("ELF32\n");
 		break;
 	case ELFCLASS64:
